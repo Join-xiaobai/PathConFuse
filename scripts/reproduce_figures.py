@@ -1,13 +1,15 @@
 #!/usr/bin/env python3
 """
-Master script to reproduce all camera-ready manuscript and supplementary figures.
+Master script to reproduce camera-ready manuscript and supplementary figures.
 Generates:
-- Figure 1: PathConFuse Multimodal Architecture (Vector PDF + High-res PNG)
 - Figure 2: Ablation Study & Subgroup Conformal Coverage Under Institutional MNAR
 - Figure 3: Empirical Kaplan-Meier Survival Stratification & Conformal Calibration Curves
 - Figure 4: Multi-Scale Biological Interpretability & Cross-Modal Conflict Resolution
 - Figure S1: Cross-Cancer Protocol Replication on TCGA-LUAD
 - Figure S2: Controlled Modality Conflict Perturbation Stress Test
+
+Note: Figure 1 (System Architecture) is the authentic high-resolution diagram
+from the manuscript and is preserved directly in figures/fig1_architecture.{pdf,png}.
 """
 
 import os
@@ -16,7 +18,7 @@ import subprocess
 import argparse
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="Reproduce all publication figures.")
+    parser = argparse.ArgumentParser(description="Reproduce publication result figures.")
     parser.add_argument("--output_dir", type=str, default=None,
                         help="Target directory for generated figures (defaults to figures/).")
     return parser.parse_args()
@@ -29,7 +31,6 @@ def main():
     fig_scripts_dir = os.path.join(base_dir, "scripts", "figures")
 
     figures = [
-        ("Figure 1 (Architecture)", "generate_fig1.py"),
         ("Figure 2 (Ablation & Coverage)", "generate_fig2.py"),
         ("Figure 3 (KM & Calibration)", "generate_fig3.py"),
         ("Figure 4 (Interpretability)", "generate_fig4.py"),
@@ -38,7 +39,7 @@ def main():
     ]
 
     print("=" * 70)
-    print(" PathConFuse: Generating All Camera-Ready Publication Figures")
+    print(" PathConFuse: Generating Camera-Ready Result Figures")
     print(f" Target output directory: {out_dir}")
     print("=" * 70)
 
@@ -52,7 +53,7 @@ def main():
             print(f"    Successfully generated {name}.")
 
     print("=" * 70)
-    print(" All figures successfully reproduced in:")
+    print(" All experimental result figures successfully generated in:")
     print(f" {out_dir}")
     print("=" * 70)
 
