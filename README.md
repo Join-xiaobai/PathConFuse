@@ -94,6 +94,7 @@ PathConFuse/
 ├── figures/                     # Camera-ready publication figures (PDF & PNG)
 ├── results/                     # Precomputed benchmark JSON results and manifests
 ├── requirements.txt             # Python dependencies
+├── environment.yml              # Conda environment specification
 ├── setup.py                     # Package setup script
 └── README.md                    # Project documentation
 ```
