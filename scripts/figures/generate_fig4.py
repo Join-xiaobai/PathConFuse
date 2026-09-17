@@ -98,25 +98,25 @@ def main():
     plt.rcParams['text.color'] = '#0F172A'
 
     # Master figure size: 16.0 x 7.15 inches
-    fig = plt.figure(figsize=(16.0, 7.15), dpi=300)
+    fig = plt.figure(figsize=(16.0, 9.2), dpi=300)
 
     # Top Section Title (Panel a)
-    fig.text(0.015, 0.966, 'a', fontsize=14, fontweight='bold', va='bottom', ha='left', color='#0F172A')
-    fig.text(0.031, 0.966, 'Hierarchical pathway cladogram and biological token activations across cancer hallmarks',
+    fig.text(0.015, 0.968, 'a', fontsize=14, fontweight='bold', va='bottom', ha='left', color='#0F172A')
+    fig.text(0.031, 0.968, 'Hierarchical pathway cladogram and biological token activations across cancer hallmarks',
              fontsize=10.5, fontweight='bold', va='bottom', ha='left', color='#0F172A')
 
     # Top Provenance and Statistics Badges in Panel a
     c_reactome = "#1E3A8A"  # Royal Navy
     c_msigdb = "#C2410C"    # Deep Amber/Terracotta
-    fig.text(0.580, 0.966, 'Provenance:', fontsize=8.2, fontweight='bold', color='#475569', va='bottom')
-    fig.text(0.655, 0.966, 'Reactome (13)', fontsize=7.6, fontweight='bold', color='#1E40AF', va='bottom',
+    fig.text(0.580, 0.968, 'Provenance:', fontsize=8.2, fontweight='bold', color='#475569', va='bottom')
+    fig.text(0.655, 0.968, 'Reactome (13)', fontsize=7.6, fontweight='bold', color='#1E40AF', va='bottom',
              bbox=dict(boxstyle="round,pad=0.20", facecolor="#DBEAFE", edgecolor="none"))
-    fig.text(0.748, 0.966, 'MSigDB Hallmark (2)', fontsize=7.6, fontweight='bold', color='#9A3412', va='bottom',
+    fig.text(0.748, 0.968, 'MSigDB Hallmark (2)', fontsize=7.6, fontweight='bold', color='#9A3412', va='bottom',
              bbox=dict(boxstyle="round,pad=0.20", facecolor="#FFEDD5", edgecolor="none"))
-    fig.text(0.880, 0.966, 'Whiskers: ±1 s.d. (5-fold CV)', fontsize=7.8, color='#64748B', va='bottom')
+    fig.text(0.880, 0.968, 'Whiskers: ±1 s.d. (5-fold CV)', fontsize=7.8, color='#64748B', va='bottom')
 
     # Bottom Section Titles (Panels b and c)
-    row1_title_y = 0.446
+    row1_title_y = 0.428
     fig.text(0.015, row1_title_y, 'b', fontsize=14, fontweight='bold', va='bottom', ha='left', color='#0F172A')
     fig.text(0.031, row1_title_y, 'Modality attention allocation and mechanism matrix across clinical regimes',
              fontsize=10.5, fontweight='bold', va='bottom', ha='left', color='#0F172A')
@@ -126,8 +126,8 @@ def main():
              fontsize=10.5, fontweight='bold', va='bottom', ha='left', color='#0F172A')
 
     # Master GridSpec: 2 rows (Row 0: Panel a; Row 1: Panels b & c)
-    gs_master = gridspec.GridSpec(2, 1, height_ratios=[1.14, 1.0], hspace=0.46,
-                                  left=0.015, right=0.985, top=0.935, bottom=0.060)
+    gs_master = gridspec.GridSpec(2, 1, height_ratios=[1.14, 1.0], hspace=0.34,
+                                  left=0.015, right=0.985, top=0.950, bottom=0.045)
 
     # ==================== ROW 0: PANEL (a) ====================
     gs_row0 = gridspec.GridSpecFromSubplotSpec(1, 2, subplot_spec=gs_master[0], width_ratios=[1.0, 1.0], wspace=0.10)
