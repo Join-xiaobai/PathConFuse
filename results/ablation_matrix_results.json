@@ -1,0 +1,42 @@
+{
+  "PathConFuse (Full: Pathway + Conflict Gate)": {
+    "c_index": 0.5103,
+    "calibration_margin_months": 33.62,
+    "overall_coverage": 0.6871,
+    "overall_width": 67.23,
+    "meth_missing_coverage": 0.925,
+    "meth_missing_width": 67.23,
+    "high_conflict_coverage": 0.7432,
+    "high_conflict_width": 67.23
+  },
+  "Ablation 1: w/o Conflict Gate (Concat Fusion)": {
+    "c_index": 0.5135,
+    "calibration_margin_months": 28.76,
+    "overall_coverage": 0.6395,
+    "overall_width": 57.52,
+    "meth_missing_coverage": 0.8625,
+    "meth_missing_width": 57.52,
+    "high_conflict_coverage": 0.7162,
+    "high_conflict_width": 57.52
+  },
+  "Ablation 2: w/o Pathway Graph (Flat MLP)": {
+    "c_index": 0.5814,
+    "calibration_margin_months": 32.3,
+    "overall_coverage": 0.6939,
+    "overall_width": 64.61,
+    "meth_missing_coverage": 0.9375,
+    "meth_missing_width": 64.61,
+    "high_conflict_coverage": 0.7838,
+    "high_conflict_width": 64.61
+  },
+  "Ablation 3: Baseline (No Pathway + No Conflict Gate)": {
+    "c_index": 0.548,
+    "calibration_margin_months": 31.34,
+    "overall_coverage": 0.6667,
+    "overall_width": 62.67,
+    "meth_missing_coverage": 0.8875,
+    "meth_missing_width": 62.67,
+    "high_conflict_coverage": 0.8108,
+    "high_conflict_width": 62.67
+  }
+}

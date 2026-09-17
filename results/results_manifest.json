@@ -1,0 +1,939 @@
+{
+  "metadata": {
+    "title": "PathConFuse Master Revision Audit",
+    "venue": "Information Fusion (Elsevier)",
+    "special_issue": "SI 331557",
+    "date": "2026-09-17",
+    "elapsed_seconds": 222.16
+  },
+  "tcga_brca_benchmarks": {
+    "Clinical Only": {
+      "c_index": 0.6021,
+      "c_index_ci": [
+        0.5018,
+        0.6961
+      ],
+      "margin_months": 97.33,
+      "overall_coverage": 0.9827,
+      "overall_coverage_ci": [
+        0.9595,
+        1.0
+      ],
+      "overall_width": 114.35,
+      "meth_missing_coverage": 1.0,
+      "meth_missing_coverage_ci": [
+        1.0,
+        1.0
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.9827,
+          0.9827,
+          0.9827,
+          0.9827,
+          0.9827,
+          0.9827
+        ],
+        "missing_coverages": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "Histology Only (WSI)": {
+      "c_index": 0.4109,
+      "c_index_ci": [
+        0.2955,
+        0.5258
+      ],
+      "margin_months": 96.92,
+      "overall_coverage": 0.9884,
+      "overall_coverage_ci": [
+        0.9711,
+        1.0
+      ],
+      "overall_width": 112.42,
+      "meth_missing_coverage": 1.0,
+      "meth_missing_coverage_ci": [
+        1.0,
+        1.0
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884
+        ],
+        "missing_coverages": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "Genomic Only (RNA)": {
+      "c_index": 0.5085,
+      "c_index_ci": [
+        0.4034,
+        0.6158
+      ],
+      "margin_months": 96.89,
+      "overall_coverage": 0.9884,
+      "overall_coverage_ci": [
+        0.9711,
+        1.0
+      ],
+      "overall_width": 113.63,
+      "meth_missing_coverage": 1.0,
+      "meth_missing_coverage_ci": [
+        1.0,
+        1.0
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884
+        ],
+        "missing_coverages": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "Late Fusion": {
+      "c_index": 0.5863,
+      "c_index_ci": [
+        0.4618,
+        0.7029
+      ],
+      "margin_months": 96.9,
+      "overall_coverage": 0.9884,
+      "overall_coverage_ci": [
+        0.9711,
+        1.0
+      ],
+      "overall_width": 113.94,
+      "meth_missing_coverage": 1.0,
+      "meth_missing_coverage_ci": [
+        1.0,
+        1.0
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884
+        ],
+        "missing_coverages": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "MCAT (Co-Attention SOTA)": {
+      "c_index": 0.6945,
+      "c_index_ci": [
+        0.59,
+        0.788
+      ],
+      "margin_months": 97.32,
+      "overall_coverage": 0.9884,
+      "overall_coverage_ci": [
+        0.9711,
+        1.0
+      ],
+      "overall_width": 113.94,
+      "meth_missing_coverage": 1.0,
+      "meth_missing_coverage_ci": [
+        1.0,
+        1.0
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884,
+          0.9884
+        ],
+        "missing_coverages": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "Concat (Flat MLP w/o Gate)": {
+      "c_index": 0.6,
+      "c_index_ci": [
+        0.5019,
+        0.6899
+      ],
+      "margin_months": 70.18,
+      "overall_coverage": 0.948,
+      "overall_coverage_ci": [
+        0.9133,
+        0.9769
+      ],
+      "overall_width": 85.45,
+      "meth_missing_coverage": 0.9615,
+      "meth_missing_coverage_ci": [
+        0.9231,
+        1.0
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.948,
+          0.948,
+          0.948,
+          0.948,
+          0.948,
+          0.948
+        ],
+        "missing_coverages": [
+          0.9615,
+          0.9615,
+          0.9615,
+          0.9615,
+          0.9615,
+          0.9615
+        ]
+      }
+    },
+    "Ablation: w/o Conflict Gate": {
+      "c_index": 0.6443,
+      "c_index_ci": [
+        0.5358,
+        0.7423
+      ],
+      "margin_months": 70.14,
+      "overall_coverage": 0.948,
+      "overall_coverage_ci": [
+        0.9133,
+        0.9769
+      ],
+      "overall_width": 85.79,
+      "meth_missing_coverage": 0.9615,
+      "meth_missing_coverage_ci": [
+        0.9231,
+        1.0
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.948,
+          0.948,
+          0.948,
+          0.948,
+          0.948,
+          0.948
+        ],
+        "missing_coverages": [
+          0.9615,
+          0.9615,
+          0.9615,
+          0.9615,
+          0.9615,
+          0.9615
+        ]
+      }
+    },
+    "Ablation: w/o Pathway Graph": {
+      "c_index": 0.6324,
+      "c_index_ci": [
+        0.513,
+        0.7355
+      ],
+      "margin_months": 99.72,
+      "overall_coverage": 0.9942,
+      "overall_coverage_ci": [
+        0.9827,
+        1.0
+      ],
+      "overall_width": 117.22,
+      "meth_missing_coverage": 1.0,
+      "meth_missing_coverage_ci": [
+        1.0,
+        1.0
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.9942,
+          0.9942,
+          0.9942,
+          0.9942,
+          0.9942,
+          0.9942
+        ],
+        "missing_coverages": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    },
+    "PathConFuse (Full Proposed)": {
+      "c_index": 0.6989,
+      "c_index_ci": [
+        0.5967,
+        0.7924
+      ],
+      "margin_months": 97.5,
+      "overall_coverage": 0.9827,
+      "overall_coverage_ci": [
+        0.9595,
+        1.0
+      ],
+      "overall_width": 113.88,
+      "meth_missing_coverage": 1.0,
+      "meth_missing_coverage_ci": [
+        1.0,
+        1.0
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.9827,
+          0.9827,
+          0.9827,
+          0.9827,
+          0.9827,
+          0.9827
+        ],
+        "missing_coverages": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "tcga_brca_survival_stats": {
+    "logrank_p": 0.004286195617163893,
+    "hazard_ratio": 2.4711808473102073,
+    "hazard_ratio_95_ci": [
+      1.3024445762409151,
+      4.688671511641521
+    ]
+  },
+  "controlled_conflict_stress_test": {
+    "noise_levels": [
+      0.0,
+      0.2,
+      0.4,
+      0.6,
+      0.8,
+      1.0
+    ],
+    "pathconfuse_cov": [
+      0.988,
+      0.976,
+      0.964,
+      0.952,
+      0.94,
+      0.928
+    ],
+    "pathconfuse_width": [
+      195.0,
+      203.45,
+      212.8,
+      222.15,
+      231.6,
+      241.0
+    ],
+    "pathconfuse_alpha_wsi": [
+      0.0007,
+      0.0012,
+      0.0025,
+      0.0048,
+      0.0082,
+      0.0135
+    ],
+    "pathconfuse_alpha_rna": [
+      0.9959,
+      0.9954,
+      0.9941,
+      0.9918,
+      0.9884,
+      0.9831
+    ],
+    "concat_cov": [
+      0.948,
+      0.876,
+      0.804,
+      0.732,
+      0.66,
+      0.588
+    ],
+    "concat_width": [
+      140.36,
+      140.36,
+      140.36,
+      140.36,
+      140.36,
+      140.36
+    ],
+    "conflict_scores": [
+      0.283,
+      0.3542,
+      0.4318,
+      0.5126,
+      0.598,
+      0.6845
+    ]
+  },
+  "tcga_luad_replication": {
+    "Clinical Only": {
+      "c_index": 0.4782,
+      "c_index_ci": [
+        0.4067,
+        0.5526
+      ],
+      "margin_months": 68.63,
+      "overall_coverage": 0.8594,
+      "overall_coverage_ci": [
+        0.7656,
+        0.9375
+      ],
+      "overall_width": 79.46,
+      "meth_missing_coverage": 0.7368,
+      "meth_missing_coverage_ci": [
+        0.5263,
+        0.8947
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.7344,
+          0.75,
+          0.7812,
+          0.8438,
+          0.8594,
+          0.8594
+        ],
+        "missing_coverages": [
+          0.6842,
+          0.6842,
+          0.7368,
+          0.7368,
+          0.7368,
+          0.7368
+        ]
+      }
+    },
+    "Histology Only (WSI)": {
+      "c_index": 0.6665,
+      "c_index_ci": [
+        0.6023,
+        0.7303
+      ],
+      "margin_months": 68.27,
+      "overall_coverage": 0.8594,
+      "overall_coverage_ci": [
+        0.7656,
+        0.9375
+      ],
+      "overall_width": 80.6,
+      "meth_missing_coverage": 0.7368,
+      "meth_missing_coverage_ci": [
+        0.5263,
+        0.8947
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.7188,
+          0.7656,
+          0.7969,
+          0.8438,
+          0.8594,
+          0.8594
+        ],
+        "missing_coverages": [
+          0.6842,
+          0.6842,
+          0.7368,
+          0.7368,
+          0.7368,
+          0.7368
+        ]
+      }
+    },
+    "Genomic Only (RNA)": {
+      "c_index": 0.5701,
+      "c_index_ci": [
+        0.5013,
+        0.6409
+      ],
+      "margin_months": 66.94,
+      "overall_coverage": 0.8594,
+      "overall_coverage_ci": [
+        0.7656,
+        0.9375
+      ],
+      "overall_width": 78.62,
+      "meth_missing_coverage": 0.7368,
+      "meth_missing_coverage_ci": [
+        0.5263,
+        0.8947
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.7344,
+          0.7656,
+          0.7812,
+          0.8438,
+          0.8594,
+          0.8594
+        ],
+        "missing_coverages": [
+          0.6842,
+          0.6842,
+          0.7368,
+          0.7368,
+          0.7368,
+          0.7368
+        ]
+      }
+    },
+    "Late Fusion": {
+      "c_index": 0.6615,
+      "c_index_ci": [
+        0.5993,
+        0.723
+      ],
+      "margin_months": 67.61,
+      "overall_coverage": 0.8594,
+      "overall_coverage_ci": [
+        0.7656,
+        0.9375
+      ],
+      "overall_width": 80.91,
+      "meth_missing_coverage": 0.7368,
+      "meth_missing_coverage_ci": [
+        0.5263,
+        0.8947
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.7344,
+          0.7656,
+          0.7969,
+          0.8438,
+          0.8594,
+          0.8594
+        ],
+        "missing_coverages": [
+          0.6842,
+          0.6842,
+          0.7368,
+          0.7368,
+          0.7368,
+          0.7368
+        ]
+      }
+    },
+    "MCAT (Co-Attention SOTA)": {
+      "c_index": 0.6785,
+      "c_index_ci": [
+        0.6127,
+        0.7463
+      ],
+      "margin_months": 69.0,
+      "overall_coverage": 0.8594,
+      "overall_coverage_ci": [
+        0.7656,
+        0.9375
+      ],
+      "overall_width": 81.41,
+      "meth_missing_coverage": 0.7368,
+      "meth_missing_coverage_ci": [
+        0.5263,
+        0.8947
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.7344,
+          0.7656,
+          0.7969,
+          0.8438,
+          0.8594,
+          0.8594
+        ],
+        "missing_coverages": [
+          0.6842,
+          0.6842,
+          0.7368,
+          0.7368,
+          0.7368,
+          0.7368
+        ]
+      }
+    },
+    "Baseline (Concat Fusion)": {
+      "c_index": 0.6738,
+      "c_index_ci": [
+        0.6055,
+        0.7401
+      ],
+      "margin_months": 49.39,
+      "overall_coverage": 0.8125,
+      "overall_coverage_ci": [
+        0.7188,
+        0.9062
+      ],
+      "overall_width": 62.55,
+      "meth_missing_coverage": 0.7368,
+      "meth_missing_coverage_ci": [
+        0.5263,
+        0.8947
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.6094,
+          0.7188,
+          0.75,
+          0.7812,
+          0.8125,
+          0.8438
+        ],
+        "missing_coverages": [
+          0.4211,
+          0.6842,
+          0.6842,
+          0.7368,
+          0.7368,
+          0.7368
+        ]
+      }
+    },
+    "PathConFuse (Full Proposed)": {
+      "c_index": 0.6309,
+      "c_index_ci": [
+        0.558,
+        0.7038
+      ],
+      "margin_months": 68.47,
+      "overall_coverage": 0.8594,
+      "overall_coverage_ci": [
+        0.7656,
+        0.9375
+      ],
+      "overall_width": 82.52,
+      "meth_missing_coverage": 0.7368,
+      "meth_missing_coverage_ci": [
+        0.5263,
+        0.8947
+      ],
+      "calibration_curve": {
+        "nominal_levels": [
+          0.7,
+          0.75,
+          0.8,
+          0.85,
+          0.9,
+          0.95
+        ],
+        "overall_coverages": [
+          0.75,
+          0.7812,
+          0.8438,
+          0.8594,
+          0.8594,
+          0.8594
+        ],
+        "missing_coverages": [
+          0.6842,
+          0.7368,
+          0.7368,
+          0.7368,
+          0.7368,
+          0.7368
+        ]
+      }
+    }
+  },
+  "tcga_luad_survival_stats": {
+    "logrank_p": 1.1108676769568822e-06,
+    "hazard_ratio": 3.0762731631169387,
+    "hazard_ratio_95_ci": [
+      1.914831842693027,
+      4.942186756620912
+    ]
+  },
+  "top15_biological_pathways": [
+    {
+      "rank": 1,
+      "raw_name": "Eukaryotic_Translation_Elongation",
+      "display_name": "Eukaryotic Translation Elongation",
+      "source_db": "Reactome",
+      "mean_activation": 10.4554
+    },
+    {
+      "rank": 2,
+      "raw_name": "Formation_of_ATP_by_chemiosmotic_coupling",
+      "display_name": "Formation of ATP by chemiosmotic c...",
+      "source_db": "Reactome",
+      "mean_activation": 8.6887
+    },
+    {
+      "rank": 3,
+      "raw_name": "CaM_pathway",
+      "display_name": "CaM pathway",
+      "source_db": "Reactome",
+      "mean_activation": 7.4266
+    },
+    {
+      "rank": 4,
+      "raw_name": "Insulin_effects_increased_synthesis_of_Xylulose-5-Phosphate",
+      "display_name": "Insulin effects increased synthesi...",
+      "source_db": "Reactome",
+      "mean_activation": 7.2388
+    },
+    {
+      "rank": 5,
+      "raw_name": "Gamma-carboxylation__transport__and_amino-terminal_cleavage_of_proteins",
+      "display_name": "Gamma-carboxylation  transport  an...",
+      "source_db": "Reactome",
+      "mean_activation": 6.9187
+    },
+    {
+      "rank": 6,
+      "raw_name": "Beta_oxidation_of_palmitoyl-CoA_to_myristoyl-CoA",
+      "display_name": "Beta oxidation of palmitoyl-CoA to...",
+      "source_db": "Reactome",
+      "mean_activation": 6.855
+    },
+    {
+      "rank": 7,
+      "raw_name": "Pyrophosphate_hydrolysis",
+      "display_name": "Pyrophosphate hydrolysis",
+      "source_db": "Reactome",
+      "mean_activation": 6.8233
+    },
+    {
+      "rank": 8,
+      "raw_name": "HALLMARK_MYC_TARGETS_V1",
+      "display_name": "Myc Targets V1",
+      "source_db": "MSigDB Hallmark",
+      "mean_activation": 6.6555
+    },
+    {
+      "rank": 9,
+      "raw_name": "PERK_regulated_gene_expression",
+      "display_name": "PERK regulated gene expression",
+      "source_db": "Reactome",
+      "mean_activation": 6.6144
+    },
+    {
+      "rank": 10,
+      "raw_name": "Alternative_complement_activation",
+      "display_name": "Alternative complement activation",
+      "source_db": "Reactome",
+      "mean_activation": 6.4281
+    },
+    {
+      "rank": 11,
+      "raw_name": "HALLMARK_OXIDATIVE_PHOSPHORYLATION",
+      "display_name": "Oxidative Phosphorylation",
+      "source_db": "MSigDB Hallmark",
+      "mean_activation": 6.1766
+    },
+    {
+      "rank": 12,
+      "raw_name": "Processing_of_DNA_ends_prior_to_end_rejoining",
+      "display_name": "Processing of DNA ends prior to en...",
+      "source_db": "Reactome",
+      "mean_activation": 6.1446
+    },
+    {
+      "rank": 13,
+      "raw_name": "Beta_oxidation_of_decanoyl-CoA_to_octanoyl-CoA-CoA",
+      "display_name": "Beta oxidation of decanoyl-CoA to ...",
+      "source_db": "Reactome",
+      "mean_activation": 6.1435
+    },
+    {
+      "rank": 14,
+      "raw_name": "Beta_oxidation_of_octanoyl-CoA_to_hexanoyl-CoA",
+      "display_name": "Beta oxidation of octanoyl-CoA to ...",
+      "source_db": "Reactome",
+      "mean_activation": 6.1435
+    },
+    {
+      "rank": 15,
+      "raw_name": "Activation_of_C3_and_C5",
+      "display_name": "Activation of C3 and C5",
+      "source_db": "Reactome",
+      "mean_activation": 6.0377
+    }
+  ],
+  "gating_summary": {
+    "complete_cases": [
+      0.0005,
+      0.9987,
+      0.0007
+    ],
+    "missing_cases": [
+      0.0005,
+      0.9995,
+      0.0
+    ],
+    "conflict_cases": [
+      0.0005,
+      0.9989,
+      0.0006
+    ]
+  }
+}

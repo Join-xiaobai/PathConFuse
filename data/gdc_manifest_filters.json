@@ -1,0 +1,27 @@
+{
+  "schema_version": "pathconfuse_gdc_filters.v1",
+  "endpoint": "https://api.gdc.cancer.gov/files",
+  "projects": ["TCGA-BRCA", "TCGA-LUAD"],
+  "queries": {
+    "diagnostic_slide": {
+      "data_type": ["Slide Image"],
+      "experimental_strategy": ["Diagnostic Slide"],
+      "expected_access": "open"
+    },
+    "star_counts": {
+      "data_type": ["Gene Expression Quantification"],
+      "workflow_type": ["STAR - Counts"],
+      "expected_access": "open"
+    },
+    "methylation_450k": {
+      "data_type": ["Methylation Beta Value"],
+      "platform": ["Illumina Human Methylation 450"],
+      "expected_access": "open"
+    },
+    "clinical_supplement": {
+      "data_type": ["Clinical Supplement"],
+      "expected_access": "open"
+    }
+  },
+  "note": "Run only on the remote server. Do not download into this workspace."
+}

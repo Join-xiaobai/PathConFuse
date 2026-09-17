@@ -1,0 +1,9 @@
+# PathConFuse Zero-Data Quick Smoke Test Config
+synthetic: true
+n_train: 100
+n_test: 50
+epochs: 2
+batch_size: 16
+lr: 0.001
+alpha: 0.10
+seed: 42

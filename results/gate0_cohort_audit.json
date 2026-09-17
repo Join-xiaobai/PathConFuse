@@ -1,0 +1,229 @@
+{
+  "schema_version": "rh_gate0_audit.v1",
+  "topic_id": 60,
+  "topic_name": "knowledge-guided-wsi-omics-fusion",
+  "gate": 0,
+  "status": "PASSED",
+  "timestamp": "2026-09-17T11:02:58.292118",
+  "cohort_manifests": {
+    "TCGA-BRCA": {
+      "diagnostic_slide": {
+        "file_count": 1133,
+        "case_count": 1062,
+        "access_all_open": true,
+        "sha256": "7435a60ac9a9b40e28605be173548ca9d71b9ac12bcb187840f77c4903a1c69a",
+        "md5": "5fc02701d1ef55f49c924fb0f32c76b0"
+      },
+      "star_counts": {
+        "file_count": 1231,
+        "case_count": 1095,
+        "access_all_open": true,
+        "sha256": "590c7eb5cf1731bd809f30684b28085e4543302c7a862cf8c13f0111cde3716a",
+        "md5": "2f4779cc7006d7d1cd7bd552d66ec26a"
+      },
+      "methylation_450k": {
+        "file_count": 895,
+        "case_count": 791,
+        "access_all_open": true,
+        "sha256": "e11777d336403d174d2c0d278c30202d8c0d0ec058bd664df219abcbb0912e52",
+        "md5": "23a920aec467b5b966c5e91eeecfc015"
+      },
+      "clinical_supplement": {
+        "file_count": 1183,
+        "case_count": 1098,
+        "access_all_open": true,
+        "sha256": "cdeb1775f566dd0ec1c72a1f442827403ed57a59e4f2cdc9e664ba36dfdfe28e",
+        "md5": "af10da9cc4d018158bbed02177e88ba5"
+      }
+    },
+    "TCGA-LUAD": {
+      "diagnostic_slide": {
+        "file_count": 541,
+        "case_count": 478,
+        "access_all_open": true,
+        "sha256": "5e5ff4a10869f072cd4eae69052daf6a084dd56ee2612d9b1240b80f4e40a42d",
+        "md5": "cd9d475fae63e4416006dfc81b940d83"
+      },
+      "star_counts": {
+        "file_count": 601,
+        "case_count": 518,
+        "access_all_open": true,
+        "sha256": "149eb5c3d806de7ed84b6bf5e15e20b41b2bb108f4b214fa6b794ef384feddc0",
+        "md5": "6db80aa2d4636492696ce4fda8bf44a4"
+      },
+      "methylation_450k": {
+        "file_count": 507,
+        "case_count": 461,
+        "access_all_open": true,
+        "sha256": "2c002ca569b4c2bbd2289da6610071412a00f4039aa0e0d2436ca1bf59dfe251",
+        "md5": "16219d82b7430856f221899a41b8f143"
+      },
+      "clinical_supplement": {
+        "file_count": 623,
+        "case_count": 585,
+        "access_all_open": true,
+        "sha256": "cdeb63df0be857ac2a514b8a4687fb119d919437117e3bb2ed8a574a5dd8de7e",
+        "md5": "f8fa265764d4762df34c6e7d665e7b3c"
+      }
+    }
+  },
+  "modality_overlap": {
+    "TCGA-BRCA": {
+      "total_unique_patients": 1098,
+      "wsi_patients": 1062,
+      "rna_patients": 1095,
+      "meth_patients": 791,
+      "wsi_and_rna": 1059,
+      "wsi_and_meth": 763,
+      "rna_and_meth": 789,
+      "complete_cases_wsi_rna_meth": 761,
+      "training_universe_count": 1061,
+      "meth_missing_in_universe": 298,
+      "meth_missing_fraction": 0.2809
+    },
+    "TCGA-LUAD": {
+      "total_unique_patients": 521,
+      "wsi_patients": 478,
+      "rna_patients": 518,
+      "meth_patients": 461,
+      "wsi_and_rna": 475,
+      "wsi_and_meth": 420,
+      "rna_and_meth": 459,
+      "complete_cases_wsi_rna_meth": 418,
+      "training_universe_count": 477,
+      "meth_missing_in_universe": 57,
+      "meth_missing_fraction": 0.1195
+    }
+  },
+  "survival_endpoints": {
+    "TCGA-BRCA": {
+      "matched_patients": 1198,
+      "OS": {
+        "events": 195,
+        "censored": 1003,
+        "censoring_rate": 0.8372,
+        "median_time_days": 926.0
+      },
+      "PFI": {
+        "events": 165,
+        "censored": 1033,
+        "censoring_rate": 0.8623,
+        "median_time_days": 865.0
+      }
+    },
+    "TCGA-LUAD": {
+      "matched_patients": 583,
+      "OS": {
+        "events": 215,
+        "censored": 368,
+        "censoring_rate": 0.6312,
+        "median_time_days": 703.0
+      },
+      "PFI": {
+        "events": 251,
+        "censored": 332,
+        "censoring_rate": 0.5695,
+        "median_time_days": 545.0
+      }
+    }
+  },
+  "mnar_statistical_audit": {
+    "sample_size": 1199,
+    "meth_available_count": 873,
+    "meth_missing_count": 326,
+    "tissue_source_site_test": {
+      "chi2": 406.058,
+      "p_value": 3.9393977738665434e-63,
+      "dof": 38,
+      "is_significant_005": true
+    },
+    "stage_test": {
+      "chi2": 21.4884,
+      "p_value": 0.00025332378246303584,
+      "dof": 4,
+      "is_significant_005": true
+    },
+    "age_bin_test": {
+      "chi2": 5.1278,
+      "p_value": 0.16267636635071145,
+      "dof": 3,
+      "is_significant_005": false
+    }
+  },
+  "tss_holdout_split": {
+    "holdout_tss_list": [
+      "A2",
+      "AN",
+      "AO",
+      "AR",
+      "E2"
+    ],
+    "train_dev_tss_list": [
+      "3C",
+      "4H",
+      "5L",
+      "5T",
+      "A1",
+      "A7",
+      "A8",
+      "AC",
+      "AQ",
+      "B6",
+      "BH",
+      "C8",
+      "D8",
+      "E9",
+      "EW",
+      "GI",
+      "GM",
+      "HN",
+      "JL",
+      "LD",
+      "LL",
+      "LQ",
+      "MS",
+      "OK",
+      "OL",
+      "PE",
+      "PL",
+      "S3",
+      "UL",
+      "UU",
+      "W8",
+      "WT",
+      "XX",
+      "Z7"
+    ],
+    "holdout_patients": 360,
+    "holdout_fraction": 0.3003,
+    "holdout_os_events": 37,
+    "holdout_os_event_rate": 0.1028,
+    "holdout_meth_missing": 120,
+    "holdout_meth_missing_rate": 0.3333,
+    "train_dev_patients": 839,
+    "train_dev_fraction": 0.6997,
+    "train_dev_os_events": 158,
+    "train_dev_os_event_rate": 0.1883,
+    "train_dev_meth_missing": 206,
+    "train_dev_meth_missing_rate": 0.2455
+  },
+  "knowledge_graph_freeze": {
+    "reactome": {
+      "version": "Release 89 (Current 2026)",
+      "source_url": "https://reactome.org/download/current/ReactomePathwaysRelation.txt",
+      "relation_edges": 23717,
+      "sha256": "fd49a624d80c14eb37ae57a02e141d574d5ede3f60022bb99edbd909448a3f1e",
+      "license": "Creative Commons Attribution 4.0 International (CC BY 4.0)"
+    },
+    "gene_ontology": {
+      "version": "2026 release",
+      "aspect": "Biological Process (BP)",
+      "license": "CC-BY 4.0"
+    },
+    "survpath_combined_signatures": {
+      "source": "Mahmood Lab SurvPath combine_signatures.csv",
+      "pathway_count": 331,
+      "sha256": "12f552804429f576e3129c59276fdbd7ec5d3554"
+    }
+  }
+}

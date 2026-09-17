@@ -1,0 +1,18 @@
+{
+  "Baseline (Concat Fusion w/o Conflict Gate)": {
+    "c_index": 0.561,
+    "calibration_margin_months": 46.29,
+    "overall_coverage": 0.8906,
+    "overall_width": 89.19,
+    "meth_missing_coverage": 0.8421,
+    "meth_missing_width": 88.2
+  },
+  "PathConFuse (Full: Pathway + Conflict Gate)": {
+    "c_index": 0.5687,
+    "calibration_margin_months": 47.5,
+    "overall_coverage": 0.875,
+    "overall_width": 91.94,
+    "meth_missing_coverage": 0.7895,
+    "meth_missing_width": 93.25
+  }
+}

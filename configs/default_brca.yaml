@@ -1,0 +1,34 @@
+# PathConFuse Training and Evaluation Configuration for TCGA-BRCA
+dataset:
+  name: "TCGA-BRCA"
+  meta_csv: "data/brca_metadata.csv"
+  rna_csv: "data/brca_rna_counts.csv"
+  wsi_dir: "data/brca_wsi_features"
+  audit_json: "results/gate0_cohort_audit.json"
+  holdout_tss: ["A2", "AN", "AO", "AR", "E2"]
+  n_genes: 4999
+  n_pathways: 331
+  wsi_dim: 768
+  clin_dim: 4
+
+model:
+  name: "PathConFuse"
+  token_dim: 128
+  hidden_dim: 256
+  n_heads: 4
+  n_layers: 2
+  dropout: 0.25
+  n_classes: 4
+
+training:
+  epochs: 15
+  batch_size: 16
+  lr: 0.001
+  weight_decay: 0.0001
+  rank_loss_weight: 0.5
+  seed: 42
+
+conformal:
+  alpha: 0.10
+  nominal_coverage: 0.90
+  conflict_scale: 0.5

@@ -1,0 +1,48 @@
+schema_version: pathconfuse_remote_data_contract.v1
+status: active
+topic_id: 60
+local_raw_data: forbidden
+gpu_authorized: false
+
+server:
+  alias: autodl-region-42
+  hostname: region-42.seetacloud.com
+  port: 31412
+  ssh_user: root
+  data_root: /root/autodl-tmp/data
+  embedding_root: /root/autodl-tmp/data/embeddings
+  gdc_token_path: null
+  notes: AutoDL instance, 30G system disk + 50G data disk at /root/autodl-tmp. Running in CPU mode (96 vCPUs, 375GB RAM) for data preparation and Gate 0 cohort audit.
+
+gdc_open_layer:
+  verified_on: 2026-09-16
+  api: https://api.gdc.cancer.gov
+  projects:
+    TCGA-BRCA:
+      cases: 1098
+      diagnostic_slide_cases: 1062
+      diagnostic_slide_files_open: 1133
+      star_count_cases: 1095
+      star_count_files_open: 1231
+      meth450_cases: 791
+      meth450_files_open: 895
+    TCGA-LUAD:
+      cases: 585
+      diagnostic_slide_cases: 478
+      diagnostic_slide_files_open: 541
+      star_count_cases: 518
+      star_count_files_open: 601
+      meth450_cases: 461
+      meth450_files_open: 507
+  out_of_scope:
+    - dbGaP controlled BAM
+    - unmasked germline
+    - KEGG adjacency redistribution
+    - CPTAC until barcode map audit
+
+training_universe_rule: >
+  Keep a patient if diagnostic WSI, clinical survival endpoint, and at least
+  one of STAR RNA or 450k methylation exist. Do not drop methylation-missing
+  BRCA cases from the universe.
+
+split_rule: patient-disjoint tissue_source_site holdout on BRCA; LUAD frozen after BRCA freeze

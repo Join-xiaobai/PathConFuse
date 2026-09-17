@@ -1,0 +1,22 @@
+# PathConFuse Cross-Cancer Configuration for TCGA-LUAD
+dataset:
+  name: "TCGA-LUAD"
+  meta_csv: "data/luad_metadata.csv"
+  rna_csv: "data/luad_rna_counts.csv"
+  wsi_dir: "data/luad_wsi_features"
+  audit_json: "results/gate0_cohort_audit.json"
+  holdout_tss: ["05", "44", "49", "50", "55"]
+  n_genes: 4999
+  n_pathways: 331
+  wsi_dim: 768
+  clin_dim: 4
+
+model:
+  name: "PathConFuse"
+  token_dim: 128
+  hidden_dim: 256
+  dropout: 0.25
+
+conformal:
+  alpha: 0.10
+  nominal_coverage: 0.90

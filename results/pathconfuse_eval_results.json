@@ -1,0 +1,29 @@
+{
+  "status": "SUCCESS",
+  "device": "cuda",
+  "epochs": 5,
+  "train_sample_size": 578,
+  "holdout_sample_size": 294,
+  "holdout_c_index": 0.5616,
+  "conformal_calibration_margin_months": 32.71,
+  "conformal_evaluation": {
+    "overall": {
+      "empirical_coverage": 0.6939,
+      "nominal_target": 0.9,
+      "average_interval_width": 65.43,
+      "sample_size": 147
+    },
+    "methylation_missing_subgroup": {
+      "empirical_coverage": 0.9375,
+      "nominal_target": 0.9,
+      "average_interval_width": 65.43,
+      "sample_size": 80
+    },
+    "high_conflict_subgroup": {
+      "empirical_coverage": 0.7297,
+      "nominal_target": 0.9,
+      "average_interval_width": 65.43,
+      "sample_size": 74
+    }
+  }
+}
