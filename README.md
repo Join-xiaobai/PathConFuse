@@ -2,11 +2,8 @@
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![PyTorch 2.0+](https://img.shields.io/badge/PyTorch-2.0+-ee4c2c.svg)](https://pytorch.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
-[![Paper](https://img.shields.io/badge/Paper-Under_Review-orange.svg)](https://www.sciencedirect.com/journal/information-fusion)
-[![Special Issue](https://img.shields.io/badge/SI-Trustworthy_Multimodal_Fusion_in_Healthcare-blueviolet.svg)](https://www.sciencedirect.com/special-issue/331557/trustworthy-multimodal-information-fusion-for-healthcare-representation-causality-and-human-centered-intelligence)
 
-Official PyTorch implementation of **PathConFuse** submitted to *Information Fusion* (Elsevier) Special Issue on *Trustworthy Multimodal Information Fusion for Healthcare: Representation, Causality, and Human-Centered Intelligence*.
+PyTorch implementation of **PathConFuse**: A knowledge-guided multimodal deep learning framework for cancer prognostication under real-world clinical constraints, including institutional missing-not-at-random (MNAR) modalities, phenotypic–genomic discordance, and right-censoring.
 
 ---
 
@@ -98,7 +95,6 @@ PathConFuse/
 ├── results/                     # Precomputed benchmark JSON results and manifests
 ├── requirements.txt             # Python dependencies
 ├── setup.py                     # Package setup script
-├── LICENSE                      # MIT License
 └── README.md                    # Project documentation
 ```
 
@@ -189,24 +185,3 @@ python scripts/reproduce_figures.py
 ```
 *Renders Figures 1–4 and Supplementary Figures S1–S2 into `figures/` as publication-ready vector PDFs and 300 DPI PNGs.*
 
----
-
-## 📜 Citation
-
-If you use **PathConFuse** in your research, please cite:
-
-```bibtex
-@article{pathconfuse2026,
-  title={Knowledge-Guided Multimodal Fusion for Cancer Prognostication under Missing Modalities and Cross-Modal Conflict},
-  author={PathConFuse Research Team},
-  journal={Information Fusion},
-  note={Special Issue on Trustworthy Multimodal Information Fusion for Healthcare (SI 331557), Under Review},
-  year={2026}
-}
-```
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
