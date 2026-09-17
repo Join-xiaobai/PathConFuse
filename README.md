@@ -28,7 +28,7 @@ Multimodal integration of gigapixel Whole-Slide Images (WSIs), high-dimensional 
 ## 🏛️ System Architecture
 
 <p align="center">
-  <img src="figures/fig1_architecture.png" width="95%" alt="PathConFuse Architecture" />
+  <img src="figures/fig1_framework.png" width="95%" alt="PathConFuse Architecture" />
 </p>
 
 ---
