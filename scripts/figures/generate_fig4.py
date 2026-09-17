@@ -101,29 +101,29 @@ def main():
     fig = plt.figure(figsize=(16.0, 9.2), dpi=300)
 
     # Top Section Title (Panel a)
-    fig.text(0.015, 0.968, 'a', fontsize=14, fontweight='bold', va='bottom', ha='left', color='#0F172A')
-    fig.text(0.031, 0.968, 'Hierarchical pathway cladogram and biological token activations across cancer hallmarks',
-             fontsize=10.5, fontweight='bold', va='bottom', ha='left', color='#0F172A')
+    fig.text(0.015, 0.970, 'a', fontsize=16, fontweight='bold', va='bottom', ha='left', color='#0F172A')
+    fig.text(0.031, 0.970, 'Hierarchical pathway cladogram and token activations across cancer hallmark programs',
+             fontsize=12.2, fontweight='bold', va='bottom', ha='left', color='#0F172A')
 
     # Top Provenance and Statistics Badges in Panel a
     c_reactome = "#1E3A8A"  # Royal Navy
     c_msigdb = "#C2410C"    # Deep Amber/Terracotta
-    fig.text(0.580, 0.968, 'Provenance:', fontsize=8.2, fontweight='bold', color='#475569', va='bottom')
-    fig.text(0.655, 0.968, 'Reactome (13)', fontsize=7.6, fontweight='bold', color='#1E40AF', va='bottom',
+    fig.text(0.615, 0.970, 'Provenance:', fontsize=9.5, fontweight='bold', color='#475569', va='bottom')
+    fig.text(0.690, 0.970, 'Reactome (13)', fontsize=8.8, fontweight='bold', color='#1E40AF', va='bottom',
              bbox=dict(boxstyle="round,pad=0.20", facecolor="#DBEAFE", edgecolor="none"))
-    fig.text(0.748, 0.968, 'MSigDB Hallmark (2)', fontsize=7.6, fontweight='bold', color='#9A3412', va='bottom',
+    fig.text(0.785, 0.970, 'MSigDB Hallmark (2)', fontsize=8.8, fontweight='bold', color='#9A3412', va='bottom',
              bbox=dict(boxstyle="round,pad=0.20", facecolor="#FFEDD5", edgecolor="none"))
-    fig.text(0.880, 0.968, 'Whiskers: ±1 s.d. (5-fold CV)', fontsize=7.8, color='#64748B', va='bottom')
+    fig.text(0.895, 0.970, 'Whiskers: ±1 s.d.', fontsize=8.8, color='#64748B', va='bottom')
 
     # Bottom Section Titles (Panels b and c)
     row1_title_y = 0.428
-    fig.text(0.015, row1_title_y, 'b', fontsize=14, fontweight='bold', va='bottom', ha='left', color='#0F172A')
+    fig.text(0.015, row1_title_y, 'b', fontsize=16, fontweight='bold', va='bottom', ha='left', color='#0F172A')
     fig.text(0.031, row1_title_y, 'Modality attention allocation and mechanism matrix across clinical regimes',
-             fontsize=10.5, fontweight='bold', va='bottom', ha='left', color='#0F172A')
+             fontsize=12.2, fontweight='bold', va='bottom', ha='left', color='#0F172A')
 
-    fig.text(0.515, row1_title_y, 'c', fontsize=14, fontweight='bold', va='bottom', ha='left', color='#0F172A')
+    fig.text(0.515, row1_title_y, 'c', fontsize=16, fontweight='bold', va='bottom', ha='left', color='#0F172A')
     fig.text(0.531, row1_title_y, 'Dynamic state-transition trajectories across clinical regimes',
-             fontsize=10.5, fontweight='bold', va='bottom', ha='left', color='#0F172A')
+             fontsize=12.2, fontweight='bold', va='bottom', ha='left', color='#0F172A')
 
     # Master GridSpec: 2 rows (Row 0: Panel a; Row 1: Panels b & c)
     gs_master = gridspec.GridSpec(2, 1, height_ratios=[1.14, 1.0], hspace=0.34,
@@ -133,13 +133,13 @@ def main():
     gs_row0 = gridspec.GridSpecFromSubplotSpec(1, 2, subplot_spec=gs_master[0], width_ratios=[1.0, 1.0], wspace=0.10)
 
     # Sub-column 1: Clade I (7 pathways)
-    gs_a1 = gridspec.GridSpecFromSubplotSpec(1, 3, subplot_spec=gs_row0[0], width_ratios=[0.14, 1.40, 1.0], wspace=0.02)
+    gs_a1 = gridspec.GridSpecFromSubplotSpec(1, 3, subplot_spec=gs_row0[0], width_ratios=[0.11, 1.62, 0.92], wspace=0.02)
     ax_tree1 = fig.add_subplot(gs_a1[0])
     ax_names1 = fig.add_subplot(gs_a1[1])
     ax_plot1 = fig.add_subplot(gs_a1[2])
 
     # Sub-column 2: Clades II, III, IV (8 pathways)
-    gs_a2 = gridspec.GridSpecFromSubplotSpec(1, 3, subplot_spec=gs_row0[1], width_ratios=[0.14, 1.40, 1.0], wspace=0.02)
+    gs_a2 = gridspec.GridSpecFromSubplotSpec(1, 3, subplot_spec=gs_row0[1], width_ratios=[0.11, 1.62, 0.92], wspace=0.02)
     ax_tree2 = fig.add_subplot(gs_a2[0])
     ax_names2 = fig.add_subplot(gs_a2[1])
     ax_plot2 = fig.add_subplot(gs_a2[2])
@@ -147,7 +147,7 @@ def main():
     def render_clade_column(ax_tree, ax_names, ax_plot, clade_subset):
         ax_tree.set_facecolor('#FFFFFF'); ax_tree.axis('off')
         ax_names.set_facecolor('#FFFFFF'); ax_names.axis('off')
-        ax_plot.set_facecolor('#FFFFFF')
+        ax_plot.set_facecolor('#FFFFFF'); ax_plot.tick_params(axis='x', labelsize=9.2)
 
         row_data = []
         clade_layout = []
@@ -171,7 +171,7 @@ def main():
         ax_tree.set_ylim(total_bottom, total_top)
         ax_tree.set_xlim(-0.05, 1.25)
         ax_names.set_ylim(total_bottom, total_top)
-        ax_names.set_xlim(0.0, 10.0)
+        ax_names.set_xlim(0.0, 10.6)
         ax_plot.set_ylim(total_bottom, total_top)
         ax_plot.set_xlim(5.2, 11.8)
 
@@ -206,7 +206,7 @@ def main():
         # Background Cards & Headers
         for (clade, top_y, bot_y, header_y, p_list) in clade_layout:
             h = top_y - bot_y
-            card_l = FancyBboxPatch((0.08, bot_y), 9.84, h,
+            card_l = FancyBboxPatch((0.08, bot_y), 10.45, h,
                                    boxstyle="Round,pad=0.04,rounding_size=0.15",
                                    facecolor=clade["bg"], edgecolor=clade["border"],
                                    linewidth=0.8, alpha=0.75, zorder=0)
@@ -220,7 +220,7 @@ def main():
 
             # Clade header
             ax_names.text(0.25, header_y, clade["name"].upper(),
-                          fontsize=8.5, fontweight='bold', color=clade["color"],
+                          fontsize=10.0, fontweight='bold', color=clade["color"],
                           va='center', ha='left', zorder=4)
 
         # Pathway Rows
@@ -229,13 +229,13 @@ def main():
             col = c_msigdb if db == "MSigDB" else c_reactome
 
             # Pathway Name
-            ax_names.text(0.25, y, p["name"], fontsize=8.8, fontweight='bold', color="#1E293B",
+            ax_names.text(0.22, y, p["name"], fontsize=9.6, fontweight='bold', color="#1E293B",
                           va='center', ha='left', zorder=3)
 
             # Provenance Badge
             badge_bg = "#FFEDD5" if db == "MSigDB" else "#DBEAFE"
             badge_col = "#9A3412" if db == "MSigDB" else "#1E40AF"
-            ax_names.text(9.75, y, db, fontsize=7.0, fontweight='bold', color=badge_col,
+            ax_names.text(10.42, y, db, fontsize=8.2, fontweight='bold', color=badge_col,
                           va='center', ha='right',
                           bbox=dict(boxstyle="round,pad=0.18", facecolor=badge_bg, edgecolor="none", lw=0),
                           zorder=4)
@@ -247,10 +247,10 @@ def main():
             bubble_size = 50 + (genes - 30) * 1.0
             ax_plot.scatter(act, y, s=bubble_size * 2.0, color=col, alpha=0.18, edgecolors='none', zorder=5)
             ax_plot.scatter(act, y, s=bubble_size, color=col, alpha=0.92, edgecolors='#FFFFFF', linewidth=1.2, zorder=6)
-            ax_plot.text(act + sd + 0.16, y, f"{act:.2f}", fontsize=8.5, fontweight='bold', color="#0F172A",
+            ax_plot.text(act + sd + 0.18, y, f"{act:.2f}", fontsize=9.8, fontweight='bold', color="#0F172A",
                          va='center', ha='left', zorder=7)
 
-        ax_plot.set_xlabel("Mean Token Activation Magnitude", fontsize=8.6, fontweight='bold', labelpad=4)
+        ax_plot.set_xlabel("Mean Token Activation Magnitude", fontsize=10.5, fontweight='bold', labelpad=4)
         ax_plot.set_yticks([])
         ax_plot.spines['left'].set_visible(False)
         ax_plot.spines['top'].set_visible(False)
@@ -310,14 +310,14 @@ def main():
                              facecolor=col["bg"], edgecolor=col["color"],
                              linewidth=1.1, zorder=2)
         ax_b.add_patch(box)
-        ax_b.text(col["cx"], 3.38, col["line1"], fontsize=8.8, fontweight='bold', color=col["color"], ha='center', va='center')
-        ax_b.text(col["cx"], 3.12, col["line2"], fontsize=7.4, color='#475569', ha='center', va='center')
+        ax_b.text(col["cx"], 3.40, col["line1"], fontsize=10.8, fontweight='bold', color=col["color"], ha='center', va='center')
+        ax_b.text(col["cx"], 3.12, col["line2"], fontsize=9.0, color='#475569', ha='center', va='center')
 
     ry_list = [2.15, 1.10, 0.05]
     for i, mod in enumerate(modalities):
         ry = ry_list[i]
-        ax_b.text(0.12, ry + 0.16, mod["name"], fontsize=9.2, fontweight='bold', color=mod["color"], ha='left', va='center')
-        ax_b.text(0.12, ry - 0.18, mod["desc"], fontsize=7.4, color='#64748B', ha='left', va='center')
+        ax_b.text(0.12, ry + 0.16, mod["name"], fontsize=11.0, fontweight='bold', color=mod["color"], ha='left', va='center')
+        ax_b.text(0.12, ry - 0.18, mod["desc"], fontsize=9.0, color='#64748B', ha='left', va='center')
 
         for j in range(3):
             col = col_bounds[j]
@@ -332,9 +332,9 @@ def main():
                                   linewidth=lw, zorder=2)
             ax_b.add_patch(card)
             val_col = "#DC2626" if cell.get("strike") else ("#15803D" if cell.get("surge") else "#0F172A")
-            ax_b.text(col["cx"], ry + 0.17, cell["val"], fontsize=10.5, fontweight='bold', color=val_col, ha='center', va='center', zorder=4)
-            ax_b.text(col["cx"], ry - 0.02, cell["sub"], fontsize=7.2, color='#64748B', ha='center', va='center', zorder=4)
-            ax_b.text(col["cx"], ry - 0.25, cell["badge"], fontsize=7.5, fontweight='bold', color=cell["badge_col"],
+            ax_b.text(col["cx"], ry + 0.17, cell["val"], fontsize=12.8, fontweight='bold', color=val_col, ha='center', va='center', zorder=4)
+            ax_b.text(col["cx"], ry - 0.02, cell["sub"], fontsize=8.8, color='#64748B', ha='center', va='center', zorder=4)
+            ax_b.text(col["cx"], ry - 0.25, cell["badge"], fontsize=9.2, fontweight='bold', color=cell["badge_col"],
                       ha='center', va='center',
                       bbox=dict(boxstyle="round,pad=0.20", facecolor=cell["badge_bg"], edgecolor="none"),
                       zorder=4)
@@ -359,12 +359,12 @@ def main():
               label=r"DNA Methylation ($\alpha^M \times 10^{-3}$)", zorder=5)
 
     # Value callouts along trajectories
-    ax_c.text(0 - 0.10, wsi_micro[0] + 0.18, "0.70 ‰", ha='right', va='bottom', fontsize=8.5, fontweight='bold', color=c_wsi, zorder=7)
-    ax_c.text(1 + 0.10, wsi_micro[1] + 0.18, "0.70 ‰", ha='left', va='center', fontsize=8.5, fontweight='bold', color=c_wsi, zorder=7)
-    ax_c.text(2 - 0.10, wsi_micro[2] + 0.18, "1.20 ‰", ha='right', va='bottom', fontsize=9.0, fontweight='bold', color=c_wsi, zorder=7)
+    ax_c.text(0 - 0.10, wsi_micro[0] + 0.18, "0.70 ‰", ha='right', va='bottom', fontsize=10.5, fontweight='bold', color=c_wsi, zorder=7)
+    ax_c.text(1 + 0.10, wsi_micro[1] + 0.18, "0.70 ‰", ha='left', va='center', fontsize=10.5, fontweight='bold', color=c_wsi, zorder=7)
+    ax_c.text(2 - 0.10, wsi_micro[2] + 0.18, "1.20 ‰", ha='right', va='bottom', fontsize=10.8, fontweight='bold', color=c_wsi, zorder=7)
 
-    ax_c.text(0 - 0.10, meth_micro[0] + 0.14, "3.40 ‰", ha='right', va='bottom', fontsize=8.5, fontweight='bold', color=c_meth, zorder=7)
-    ax_c.text(2 - 0.10, meth_micro[2] - 0.18, "0.60 ‰", ha='right', va='top', fontsize=8.5, fontweight='bold', color=c_meth, zorder=7)
+    ax_c.text(0 - 0.10, meth_micro[0] + 0.14, "3.40 ‰", ha='right', va='bottom', fontsize=10.5, fontweight='bold', color=c_meth, zorder=7)
+    ax_c.text(2 - 0.10, meth_micro[2] - 0.18, "0.60 ‰", ha='right', va='top', fontsize=10.5, fontweight='bold', color=c_meth, zorder=7)
 
     # Red 'X' marker at (1.0, 0.0)
     ax_c.scatter([1], [0.0], s=140, color="#DC2626", marker="X", linewidths=2.4, zorder=8)
@@ -372,7 +372,7 @@ def main():
     # Clean bottom callout box directly below (1.0, 0.0) without crossing ANY lines
     ax_c.annotate(r"$\mathbf{\alpha^M \equiv 0.00}$  [Hard Zero Mask: Zero Imputation]",
                  xy=(1.0, -0.05), xytext=(1.0, -0.22),
-                 ha="center", va="center", fontsize=7.6, fontweight="bold", color="#DC2626",
+                 ha="center", va="center", fontsize=9.2, fontweight="bold", color="#DC2626",
                  bbox=dict(boxstyle="round,pad=0.24", facecolor="#FEE2E2", edgecolor="#DC2626", linewidth=0.85),
                  arrowprops=dict(arrowstyle="->", color="#DC2626", lw=1.2, shrinkB=4),
                  zorder=9)
@@ -386,10 +386,10 @@ def main():
     ax_c.text(2.11, 0.95, "+71.4% Surge\n(p < 0.001)", ha="left", va="center",
             fontsize=7.8, fontweight="bold", color=c_wsi, zorder=8)
 
-    ax_c.set_ylabel(r"Micro Attention Allocation ($\alpha \times 10^{-3}$)", fontsize=8.8, fontweight='bold', labelpad=6)
+    ax_c.set_ylabel(r"Micro Attention Allocation ($\alpha \times 10^{-3}$)", fontsize=10.8, fontweight='bold', labelpad=6)
     ax_c.set_xticks(x)
-    ax_c.set_xticklabels(cats, fontsize=8.2, fontweight='bold')
-    ax_c.tick_params(axis='x', pad=18)
+    ax_c.set_xticklabels(cats, fontsize=9.8, fontweight='bold')
+    ax_c.tick_params(axis='x', pad=18); ax_c.tick_params(axis='y', labelsize=9.2)
     ax_c.set_xlim(-0.45, 2.65)
     ax_c.set_ylim(-0.65, 4.2)
     ax_c.spines['top'].set_visible(False)
@@ -397,7 +397,7 @@ def main():
     ax_c.spines['left'].set_color('#94A3B8')
     ax_c.spines['bottom'].set_color('#94A3B8')
     ax_c.grid(True, linestyle=":", alpha=0.5, color='#CBD5E1', zorder=0)
-    ax_c.legend(loc="upper right", fontsize=8.0, frameon=True, facecolor="#FFFFFF", edgecolor="#CBD5E1", framealpha=0.96)
+    ax_c.legend(loc="upper right", fontsize=9.5, frameon=True, facecolor="#FFFFFF", edgecolor="#CBD5E1", framealpha=0.96)
 
     # Save high-res figures
     plt.savefig(pdf_out, bbox_inches='tight')
