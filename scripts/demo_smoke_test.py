@@ -9,6 +9,7 @@ import sys
 import os
 import time
 import torch
+import numpy as np
 from torch.utils.data import DataLoader
 
 # Add parent dir to path
