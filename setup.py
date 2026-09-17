@@ -4,7 +4,8 @@ setup(
     name="pathconfuse",
     version="1.0.0",
     description="Knowledge-Guided Multimodal Fusion for Cancer Prognostication under Missing Modalities and Cross-Modal Conflict",
-    author="PathConFuse Research Team",
+    author="Wanjun Ma, Wenjun Li, Mengyun Yang, Xiwei Tang",
+    author_email="wanjun@hnfnu.edu.cn, nudt_xiwei@126.com",
     packages=find_packages(),
     python_requires=">=3.9",
     install_requires=[
